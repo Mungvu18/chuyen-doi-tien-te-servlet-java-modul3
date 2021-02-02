@@ -1,6 +1,8 @@
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.annotation.*;
+import javax.servlet.http.HttpServletRequest;
 
 @WebServlet(name = "java-web-current-converter", urlPatterns = "/convert")
 public class javawebcurrentconverter extends javax.servlet.http.HttpServlet {
@@ -16,5 +18,7 @@ public class javawebcurrentconverter extends javax.servlet.http.HttpServlet {
         writer.println("</html>");
     }
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+    RequestDispatcher requestDispatcher = request.getRequestDispatcher("convert.jsp");
+    requestDispatcher.forward(request,response);
     }
 }

@@ -12,7 +12,7 @@
   </head>
   <body>
   <h1>Currency Converter</h1>
-  <form action="/convert" method="post">
+  <form action="/convert" method="get">
   <label>Rate:</label><br>
   <input type="text" name="rate" placeholder="RATE" value="22000"> <br>
   <label>USD:</label><br>
